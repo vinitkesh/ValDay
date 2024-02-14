@@ -1,0 +1,202 @@
+
+:root {
+    --shade1: #ff3e3e;
+    --shade2: #ff2929;
+    --shade3: #ff0d0d;
+    --shade4: #f50808;
+}
+
+body {
+    background: #ff0000;
+    color: #fff;
+    font-family: "Cedarville Cursive", cursive;
+    font-size: 3em;
+    margin-top: 2em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+    
+  }
+  
+  .container{
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+  .heart {
+     background-color: red;
+
+    display: inline-block;
+    height: 30vh;
+
+    position:absolute;
+    top: 50vh;
+    transform: rotate(-45deg);
+    width: 30vh;
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    background-color: red;  /* by default */
+    border-radius: 50%;
+    height: 30vh;
+    position: absolute;
+    width: 30vh;
+
+    display: flex;
+  }
+  
+  .heart:before {
+    top: -15vh;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 15vh;
+    top: 0;
+  }
+
+.heart1, .heart1::before, .heart1::after {
+    background-color: var(--shade1);
+}
+.heart2, .heart2::before, .heart2::after {
+    background-color: var(--shade2);
+}
+.heart3, .heart3::before, .heart3::after {
+    background-color: var(--shade3);
+}
+.heart4, .heart4::before, .heart4::after {
+    background-color: var(--shade4);
+}
+
+.heart1{
+  scale: 4;
+}
+.heart2{
+  scale: 2.5;
+}
+.heart3{
+  scale: 2;
+}
+.heart4{
+  scale: 1.5;
+}
+.heart{
+  animation: beat 1s infinite;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+    rotate: -45deg;
+  }
+  50% {
+    transform: scale(1.05);
+    rotate: -45deg;
+  }
+  100% {
+    transform: scale(1);
+    rotate: -45deg;
+  }
+}
+
+.heart1{
+  animation: beat1 1s infinite;
+}
+.heart2{
+  animation: beat2 1s infinite;
+}
+.heart3{
+  animation: beat3 1s infinite;
+}
+.heart4{
+  animation: beat4 1s infinite;
+}
+
+@keyframes beat1 {
+  0% {
+    transform: scale(1);
+    rotate: -45deg;
+  }
+  50% {
+    transform: scale(1.15);
+    rotate: -45deg;
+  }
+  100% {
+    transform: scale(1);
+    rotate: -45deg;
+  }
+}
+
+@keyframes beat2 {
+  0% {
+    transform: scale(1);
+    rotate: -45deg;
+  }
+  50% {
+    transform: scale(1.45);
+    rotate: -45deg;
+  }
+  100% {
+    transform: scale(1);
+    rotate: -45deg;
+  }
+}
+
+@keyframes beat3 {
+  0% {
+    transform: scale(1);
+    rotate: -45deg;
+  }
+  50% {
+    transform: scale(1.2);
+    rotate: -45deg;
+  }
+  100% {
+    transform: scale(1);
+    rotate: -45deg;
+  }
+}
+
+@keyframes beat4 {
+  0% {
+    transform: scale(1);
+    rotate: -45deg;
+  }
+  50% {
+    transform: scale(1.1);
+    rotate: -45deg;
+  }
+  100% {
+    transform: scale(1);
+    rotate: -45deg;
+  }
+}
+
+.text{
+  position: relative;
+
+  font-size: 8vh;
+  color: white;
+
+  width: 50vw;
+
+  text-align: center;
+  font-family: "Cedarville Cursive", cursive;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+
+  line-height: 100%;
+}
+
+.valentine{
+  font-size: 10vh;
+}
