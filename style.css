@@ -7,7 +7,7 @@
 }
 
 body {
-    background: #ff0000;
+    background: #322121;
     color: #fff;
     font-family: "Cedarville Cursive", cursive;
     font-size: 3em;
@@ -24,7 +24,8 @@ body {
   .container{
     position: relative;
     
-    display: flex;
+    display: flex;1
+
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -88,24 +89,6 @@ body {
 }
 .heart4{
   scale: 1.5;
-}
-.heart{
-  animation: beat 1s infinite;
-}
-
-@keyframes beat {
-  0% {
-    transform: scale(1);
-    rotate: -45deg;
-  }
-  50% {
-    transform: scale(1.05);
-    rotate: -45deg;
-  }
-  100% {
-    transform: scale(1);
-    rotate: -45deg;
-  }
 }
 
 .heart1{
